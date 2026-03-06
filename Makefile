@@ -82,6 +82,6 @@ check:
 #MAKEFILE VARIABLE
 
 NAME = zombie 
-SCRS = cadena.c objeto.c zombie.c
+SCRS = cadena.c objeto.c decorado.c zombie.c
 INCLUDES = -lncurses #-lX11
 
