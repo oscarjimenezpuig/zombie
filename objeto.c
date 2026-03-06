@@ -5,16 +5,17 @@
 static objeto_t* objeto=NULL;
 static u16 objetos=0;
 
-objeto_t objnew(char* n,u8 c) {
+objeto_t objnew(char* n,u8 t,u8 c) {
     objeto_t no=malloc(3+c);
     if(no) {
-        *no=3+c;
+        *no=4+c;
         int nc=cadset(n);
         if(nc!=-1) {
             *(no+1)=nc%256;
             *(no+2)=nc/256;
-            u8* p=no+3;
-            while(p!=no+3+c) *p++=0;
+            *(no+3)=t;
+            u8* p=no+4;
+            while(p!=no+4+c) *p++=0;
             void* ptr=realloc(objeto,sizeof(objeto_t)*(objetos+1));
             if(ptr) {
                 objeto=ptr;

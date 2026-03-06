@@ -7,7 +7,7 @@ objeto_t d_agua,d_aguap,d_prado,d_bosque,d_monte,d_pico;
 #define lopd FOR(k,0,NUMDEC)
 
 static int decnew(objeto_t* obj,char* n,u8 id,char c,u8 col) {
-    if((*obj=objnew(n,DNC))) {
+    if((*obj=objnew(n,TIPDEC,DNC))) {
         objset(*obj,DID,id);
         objset(*obj,DCR,c);
         objset(*obj,DCL,col);
@@ -26,6 +26,8 @@ void decini() {
         if(!decnew(obs+k,nom[k],k+1,chr[k],col[k])) printf("%s no definido",nom[k]);
     }
 }
+
+#undef lopd
     
     
     

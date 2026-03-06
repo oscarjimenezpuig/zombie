@@ -2,7 +2,7 @@
 
 #include "cadena.h"
 
-objeto_t objnew(char* nombre,u8 caracteristicas);
+objeto_t objnew(char* nombre,u8 tipo,u8 caracteristicas);
 /* cuando se define el objeto se define con dimension 2 para el nombre + el numero de caracteristicas */
 
 u16 objsiz();

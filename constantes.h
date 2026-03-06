@@ -6,11 +6,21 @@
 #define EOS 0 /* final de un string */
 #define EOC 1 /* final de la cadena */
 
+#define NULO 0 /* valor nulo */
+
 /* macros */
 #define COLV(I,P) ((I)+(P)*8) /* codigo correspondiente al color */
 #define COLGI(V) ((V)%8) /* tinta a partir del codigo de color */
 #define COLGP(V) ((V)/8) /* paper a partir del codigo de color */
 #define FOR(V,I,L) for(int V=(I);V<(L);V++) /* bucle for */
+
+/* objeto */
+#define ONCS 0 /* numero de caracteristica que nos da el tamaño del objeto */
+#define ONCN 1 /* numero de caracteristica donde empieza el nombre (tiene dimension 2) */
+#define ONCT 3 /* numero de caracteristica donde esta el tipo del objeto */
+
+/* tipos objeto */
+#define TIPDEC 1 /* decorado */
 
 /* decorado */
 /* tipos de caracteristicas */
@@ -50,6 +60,17 @@
 #define DIDMA 6
 #define DCRMA ' '
 #define DCLMA COLV(WHITE,WHITE)
+
+/* mapa */
+#define MAPC 240 /* columnas totales del mapa */ 
+#define MAPR 240 /* filas totales del mapa */
+
+#define LFVIS 7 /* localidad bandera que dice el obstaculo */
+#define LFVST 8 /* localidad, bandera que dice si es visto */
+#define LFVIS 16 /* localidad, bandera que dice si es visible acutalmente */
+
+
+
 
 
 
